@@ -13,3 +13,7 @@
 
 Route::get('/', 'PagesController@index' );
 Route::post('top', 'PeliculaController@get' );
+
+Route::get('principal', 'Controller@principal');
+Route::get('login', 'Controller@login');
+Route::get('registro', 'Controller@registro');
