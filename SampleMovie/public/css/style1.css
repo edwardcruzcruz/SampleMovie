@@ -111,7 +111,7 @@ body {
 }
 
 
-@media (max-width: 576px){
+@media (max-width: 1500px min-width: 576){
 	.myway{
 	margin-left: 350px;
 	margin-right: 0px;
@@ -119,9 +119,9 @@ body {
 }
 }
 
-@media (max-width: 576px){
+@media (max-width: 575px){
 	.myway{
-	margin-left: 350px;
+	margin-left: 50px;
 	margin-right: 0px;
 	width: 500px;
 }
