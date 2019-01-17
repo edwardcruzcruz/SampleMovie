@@ -13,7 +13,7 @@
 
 Route::get('/', 'Controller@registro' );
 Route::post('store_user', 'UsuarioController@store' );
-Route::post('autenticar_user', 'UsuarioController@get' );
+Route::post('autenticar_user', 'UsuarioController@autenticacion' );
 Route::get('principal', 'Controller@principal');
 Route::get('login', 'Controller@login');
 Route::get('registro', 'Controller@registro');

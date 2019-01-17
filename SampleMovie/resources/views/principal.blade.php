@@ -77,55 +77,17 @@
 		</div>	
 <div class=col-9>	
 <div id"no" class="container-fluid">
+	<?php foreach($pelis as $peli): ?>
 	<div class="col-4">
 		<div class="card" style="width: 18rem;">
 		  <div class="card-body">
-		    <h5 class="card-title">Nombre Pelicula</h5>
-		    <p class="card-text">Descripcion Pelicula</p>
+		    <h5 class="card-title">Nombre = {{$peli->titulo}}</h5>
+		    <p class="card-text">Descripcion={{$peli->reparto}}</p>
 		    <a href="#" class="btn btn-primary">Alquilar</a>
 		  </div>
 		</div>
 	</div>
-
-	<div class="col-4">
-		<div class="card" style="width: 18rem;">
-		  <div class="card-body">
-		    <h5 class="card-title">Nombre Pelicula</h5>
-		    <p class="card-text">Descripcion Pelicula</p>
-		    <a href="#" class="btn btn-primary">Alquilar</a>
-		  </div>
-		</div>
-	</div>
-
-	<div class="col-4">
-		<div class="card" style="width: 18rem;">
-		  <div class="card-body">
-		    <h5 class="card-title">Nombre Pelicula</h5>
-		    <p class="card-text">Descripcion Pelicula</p>
-		    <a href="#" class="btn btn-primary">Alquilar</a>
-		  </div>
-		</div>
-	</div>
-
-	<div class="col-4">
-		<div class="card" style="width: 18rem;">
-		  <div class="card-body">
-		    <h5 class="card-title">Nombre Pelicula</h5>
-		    <p class="card-text">Descripcion Pelicula</p>
-		    <a href="#" class="btn btn-primary">Alquilar</a>
-		  </div>
-		</div>
-	</div>
-
-	<div class="col-4">
-		<div class="card" style="width: 18rem;">
-		  <div class="card-body">
-		    <h5 class="card-title">Nombre Pelicula</h5>
-		    <p class="card-text">Descripcion Pelicula</p>
-		    <a href="#" class="btn btn-primary">Alquilar</a>
-		  </div>
-		</div>
-	</div>
+	<?php endforeach?>
 </div>
 </div>
 </div>

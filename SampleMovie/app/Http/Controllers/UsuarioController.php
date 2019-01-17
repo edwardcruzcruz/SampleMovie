@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 class UsuarioController extends Controller
 {
     //
+    use PeliculaController;
     public function store(Request $request)
     {
 	$rules=array(
@@ -49,7 +50,7 @@ class UsuarioController extends Controller
             return Redirect::to('login');
         }
     }
-    public function get(Request $request)
+    public function autenticacion(Request $request)
     {
 	$rules=array(
         	'username' => 'required',
@@ -68,11 +69,13 @@ class UsuarioController extends Controller
 	    #dd($user,$pass);
 	    #echo $UsuarioValidacion;
 	    if($usuario === $UsuarioValidacion["user"] && $password === $UsuarioValidacion["password"] && isset($UsuarioValidacion) ){
-	    	    return Redirect::to('principal');
+		    $pelis=$this->getAll();
+	    	    #echo $pelis;
+		    return View('principal')->with('pelis',$pelis);#pasando los datos se session a la ventana principal de cada login
 	    }
             else{
 	    	    #Session::flash('message', 'Successfully created nerd!');
-	            return Redirect::to('login')->with('user',$UsuarioValidacion);#pasando los datos se session a la ventana principal de cada login
+	            return Redirect::to('login');
 
 	    }
         }

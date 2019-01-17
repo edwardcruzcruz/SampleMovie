@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Pelicula;
 use Illuminate\Http\Request;
 
-class PeliculaController extends Controller
+trait PeliculaController #extends Controller
 {
     //
 //public function hacer(Request $request)
@@ -20,6 +20,14 @@ class PeliculaController extends Controller
 	#}
 	return View('prueba')->with('pelis',$pelicula);
 	dd($pelicula);
+    }
+    public function getAll()
+    {
+	$pelicula = Pelicula::all();
+	#foreach($pelicula as $p){
+   	#	echo $p->titulo;
+	#}
+	return $pelicula;
     }
     public function edit($id)
     {
