@@ -70,14 +70,18 @@ return [
             'model' => App\Models\Pelicula::class,
         ],
 
-         'alquileres' => [
-             'driver' => 'eloquent',
-             'model' => App\Models\Alquiler::class,
-         ],
-	 'usuarios'=>[
-	     'driver'=>'eloquent',
-	     'model'=>App\Models\Usuario::class
-         ]
+        'alquileres' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Alquiler::class,
+        ],
+	'usuarios' => [
+	    'driver' => 'eloquent',
+	    'model' => App\Models\Usuario::class,
+        ],
+	'ingreso' => [ 
+            'driver' => 'eloquent',
+            'model' => App\Models\Login::class,
+        ]
     ],
 
     /*

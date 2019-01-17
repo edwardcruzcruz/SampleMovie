@@ -50,14 +50,14 @@
 					</div>
 					<hr>
 				</div>
-
 				<div class="panel-body">
 					<div class="row">
 						<div class="col-lg-12">
 
 
 
-							<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+							<form id="login-form" action="{{URL::to('autenticar_user')}}"  method="POST" role="form" style="display: block;">
+							{{csrf_field()}}
 								<div class="form-group">
 									<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 								</div>

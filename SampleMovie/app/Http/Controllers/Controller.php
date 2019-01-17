@@ -10,7 +10,6 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
     public function principal(){
 	return view('principal');
     }
@@ -20,6 +19,4 @@ class Controller extends BaseController
     public function registro(){
 	return view('registro');
     }
-    
-
 }
